@@ -1,0 +1,19 @@
+image: node:9.6.1
+
+pages:
+  tags:
+    - ubuntu
+
+  cache:
+    paths:
+    - node_modules/
+
+  script:
+  - npm install
+  - npm run build
+  artifacts:
+    paths:
+    - public
+  only:
+  - master
+
